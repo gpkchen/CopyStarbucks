@@ -18,8 +18,14 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Camera Usage Description</key>
+	<string>是否允许此App使用你的相机？</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>Location When In Use Usage Descriptio</key>
+	<string>是否允许此App使用定位服务？</string>
+	<key>Photo Library Usage Description</key>
+	<string>是否允许此App访问你的媒体资料库?</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -28,6 +34,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

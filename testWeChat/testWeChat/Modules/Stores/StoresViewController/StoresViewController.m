@@ -7,17 +7,30 @@
 //
 
 #import "StoresViewController.h"
+#import <MapKit/MapKit.h>
 
-@interface StoresViewController ()
 
+@interface StoresViewController ()<MKMapViewDelegate>
+@property (nonatomic, strong) MKMapView *mapView;
 @end
 
 @implementation StoresViewController
 
+
+#pragma mark -- Controller LifeCircle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
+    self.mapView.delegate = self;
+    [self.view addSubview:self.mapView];
+    
 }
+
+#pragma mark -- MKMapViewDelegate
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

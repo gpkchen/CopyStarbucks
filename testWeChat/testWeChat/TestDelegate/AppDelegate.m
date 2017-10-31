@@ -78,6 +78,8 @@
     
     self.baseTabBarViewController = [[BaseTabBarViewController alloc] init];
     [self.baseTabBarViewController setViewControllers:@[homeVC,starGiftCardVC,storesVC,accountVC]];
+    [self.baseTabBarViewController.tabBar setTintColor:[UIColor greenColor]];
+    [self.baseTabBarViewController.tabBar setBackgroundColor:[UIColor whiteColor]];
     
     [self.window setRootViewController:self.baseTabBarViewController];
     

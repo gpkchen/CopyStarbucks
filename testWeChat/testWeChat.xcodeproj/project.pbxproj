@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		749963681FA8BDB400269AF3 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 749963671FA8BDB400269AF3 /* HomeCell.m */; };
 		BA52A90E1F5E50B7001E7608 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A90D1F5E50B7001E7608 /* main.m */; };
 		BA52A9111F5E50B7001E7608 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A9101F5E50B7001E7608 /* AppDelegate.m */; };
 		BA52A9141F5E50B7001E7608 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A9131F5E50B7001E7608 /* ViewController.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		749963661FA8BDB400269AF3 /* HomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		749963671FA8BDB400269AF3 /* HomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
 		BA52A9091F5E50B7001E7608 /* testWeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testWeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA52A90D1F5E50B7001E7608 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA52A90F1F5E50B7001E7608 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +60,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7499635E1FA8B7B000269AF3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		7499635F1FA8B7BD00269AF3 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		749963601FA8B7D100269AF3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		749963621FA8B7FD00269AF3 /* StoresViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = StoresViews;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		749963641FA8B81600269AF3 /* StoresModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoresModel;
+			sourceTree = "<group>";
+		};
+		749963651FA8BD8900269AF3 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				749963661FA8BDB400269AF3 /* HomeCell.h */,
+				749963671FA8BDB400269AF3 /* HomeCell.m */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		BA52A9001F5E50B7001E7608 = {
 			isa = PBXGroup;
 			children = (
@@ -110,9 +158,9 @@
 		BAFAD5321FA8612400B8C9E5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				BAFAD53F1FA866AF00B8C9E5 /* Stores */,
 				BAFAD5341FA8612400B8C9E5 /* Home */,
 				BAFAD5351FA8612400B8C9E5 /* StarGiftCard */,
+				BAFAD53F1FA866AF00B8C9E5 /* Stores */,
 				BAFAD5331FA8612400B8C9E5 /* Account */,
 			);
 			path = Modules;
@@ -121,8 +169,6 @@
 		BAFAD5331FA8612400B8C9E5 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				BAFAD54A1FA867B200B8C9E5 /* AccountModel */,
-				BAFAD5491FA867A700B8C9E5 /* AccountView */,
 				BAFAD5481FA8679A00B8C9E5 /* AccountViewController */,
 			);
 			path = Account;
@@ -131,8 +177,7 @@
 		BAFAD5341FA8612400B8C9E5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				BAFAD5451FA8675B00B8C9E5 /* HomeView */,
-				BAFAD5441FA8675300B8C9E5 /* HomeModel */,
+				749963651FA8BD8900269AF3 /* HomeView */,
 				BAFAD5431FA8674100B8C9E5 /* HomeViewCotroller */,
 			);
 			path = Home;
@@ -141,8 +186,6 @@
 		BAFAD5351FA8612400B8C9E5 /* StarGiftCard */ = {
 			isa = PBXGroup;
 			children = (
-				BAFAD5471FA8677C00B8C9E5 /* StarGiftCardModel */,
-				BAFAD5461FA8676400B8C9E5 /* StarGiftCardView */,
 				BAFAD5361FA8612400B8C9E5 /* StarGiftCardViewController */,
 			);
 			path = StarGiftCard;
@@ -160,10 +203,10 @@
 		BAFAD5371FA8619200B8C9E5 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				749963601FA8B7D100269AF3 /* Network */,
+				7499635F1FA8B7BD00269AF3 /* Tool */,
+				7499635E1FA8B7B000269AF3 /* Category */,
 				BAFAD5381FA8619200B8C9E5 /* BaseClass */,
-				BAFAD5391FA8619200B8C9E5 /* Category */,
-				BAFAD53A1FA8619200B8C9E5 /* Network */,
-				BAFAD53B1FA8619200B8C9E5 /* Tool */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -179,32 +222,11 @@
 			path = BaseClass;
 			sourceTree = "<group>";
 		};
-		BAFAD5391FA8619200B8C9E5 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		BAFAD53A1FA8619200B8C9E5 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		BAFAD53B1FA8619200B8C9E5 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
 		BAFAD53F1FA866AF00B8C9E5 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
-				BAFAD5421FA8672300B8C9E5 /* StoresViews */,
-				BAFAD5411FA8671600B8C9E5 /* StoresModel */,
+				749963641FA8B81600269AF3 /* StoresModel */,
+				749963621FA8B7FD00269AF3 /* StoresViews */,
 				BAFAD5401FA866F700B8C9E5 /* StoresViewController */,
 			);
 			path = Stores;
@@ -219,20 +241,6 @@
 			path = StoresViewController;
 			sourceTree = "<group>";
 		};
-		BAFAD5411FA8671600B8C9E5 /* StoresModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StoresModel;
-			sourceTree = "<group>";
-		};
-		BAFAD5421FA8672300B8C9E5 /* StoresViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StoresViews;
-			sourceTree = "<group>";
-		};
 		BAFAD5431FA8674100B8C9E5 /* HomeViewCotroller */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,34 +250,6 @@
 			path = HomeViewCotroller;
 			sourceTree = "<group>";
 		};
-		BAFAD5441FA8675300B8C9E5 /* HomeModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HomeModel;
-			sourceTree = "<group>";
-		};
-		BAFAD5451FA8675B00B8C9E5 /* HomeView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HomeView;
-			sourceTree = "<group>";
-		};
-		BAFAD5461FA8676400B8C9E5 /* StarGiftCardView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StarGiftCardView;
-			sourceTree = "<group>";
-		};
-		BAFAD5471FA8677C00B8C9E5 /* StarGiftCardModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StarGiftCardModel;
-			sourceTree = "<group>";
-		};
 		BAFAD5481FA8679A00B8C9E5 /* AccountViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,20 +257,6 @@
 				BAFAD5521FA8688700B8C9E5 /* AccountViewController.m */,
 			);
 			path = AccountViewController;
-			sourceTree = "<group>";
-		};
-		BAFAD5491FA867A700B8C9E5 /* AccountView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AccountView;
-			sourceTree = "<group>";
-		};
-		BAFAD54A1FA867B200B8C9E5 /* AccountModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AccountModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +333,7 @@
 			files = (
 				BAFAD54D1FA867E800B8C9E5 /* BaseStarBucksViewController.m in Sources */,
 				BA52A9141F5E50B7001E7608 /* ViewController.m in Sources */,
+				749963681FA8BDB400269AF3 /* HomeCell.m in Sources */,
 				BAFAD5591FA86D7D00B8C9E5 /* StoresViewController.m in Sources */,
 				BAFAD5531FA8688700B8C9E5 /* AccountViewController.m in Sources */,
 				BA52A9111F5E50B7001E7608 /* AppDelegate.m in Sources */,
