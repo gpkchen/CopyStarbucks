@@ -7,8 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "BaseTabBarViewController.h"
+#import "HomeViewController.h"
+#import "StarGiftCardViewController.h"
+#import "StoresViewController.h"
+#import "AccountViewController.h"
+
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong)BaseTabBarViewController   *baseTabBarViewController;
 
 @end
 
@@ -17,6 +25,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window         = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor blackColor];
+    [self.window makeKeyAndVisible];
+    
+    //
+    [self getRootViewController];
+
     return YES;
 }
 
@@ -46,6 +62,27 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark -- Private Method
+
+- (void)getRootViewController {
+    
+    HomeViewController *homeVC = [[HomeViewController alloc] init];
+    homeVC.title = @"首页";
+    StarGiftCardViewController *starGiftCardVC = [[StarGiftCardViewController alloc] init];
+    starGiftCardVC.title = @"星礼卡";
+    StoresViewController *storesVC = [[StoresViewController alloc] init];
+    storesVC.title = @"门店";
+    AccountViewController *accountVC = [[AccountViewController alloc] init];
+    accountVC.title = @"账户";
+    
+    self.baseTabBarViewController = [[BaseTabBarViewController alloc] init];
+    [self.baseTabBarViewController setViewControllers:@[homeVC,starGiftCardVC,storesVC,accountVC]];
+    
+    [self.window setRootViewController:self.baseTabBarViewController];
+    
+}
+
 
 
 @end

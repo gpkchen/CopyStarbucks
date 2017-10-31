@@ -1,30 +1,30 @@
 //
-//  BaseTabBarViewController.m
+//  BaseStarBucksViewController.m
 //  testWeChat
 //
 //  Created by Tesla_Chen on 2017/10/31.
 //  Copyright © 2017年 Telsa_Chen. All rights reserved.
 //
 
-#import "BaseTabBarViewController.h"
+#import "BaseStarBucksViewController.h"
 
-@interface BaseTabBarViewController ()
+@interface BaseStarBucksViewController ()
 
 @end
 
-@implementation BaseTabBarViewController
+@implementation BaseStarBucksViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+
+
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 
 @end

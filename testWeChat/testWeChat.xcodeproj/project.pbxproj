@@ -14,6 +14,11 @@
 		BA52A9191F5E50B7001E7608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA52A9181F5E50B7001E7608 /* Assets.xcassets */; };
 		BA52A91C1F5E50B7001E7608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA52A91A1F5E50B7001E7608 /* LaunchScreen.storyboard */; };
 		BAFAD53E1FA8621800B8C9E5 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFAD53D1FA8621800B8C9E5 /* BaseTabBarViewController.m */; };
+		BAFAD54D1FA867E800B8C9E5 /* BaseStarBucksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFAD54C1FA867E800B8C9E5 /* BaseStarBucksViewController.m */; };
+		BAFAD5501FA8683F00B8C9E5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFAD54F1FA8683F00B8C9E5 /* HomeViewController.m */; };
+		BAFAD5531FA8688700B8C9E5 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFAD5521FA8688700B8C9E5 /* AccountViewController.m */; };
+		BAFAD5561FA868B100B8C9E5 /* StarGiftCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFAD5551FA868B100B8C9E5 /* StarGiftCardViewController.m */; };
+		BAFAD5591FA86D7D00B8C9E5 /* StoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFAD5581FA86D7D00B8C9E5 /* StoresViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,16 @@
 		BA52A91D1F5E50B7001E7608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAFAD53C1FA8621800B8C9E5 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarViewController.h; sourceTree = "<group>"; };
 		BAFAD53D1FA8621800B8C9E5 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarViewController.m; sourceTree = "<group>"; };
+		BAFAD54B1FA867E800B8C9E5 /* BaseStarBucksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseStarBucksViewController.h; sourceTree = "<group>"; };
+		BAFAD54C1FA867E800B8C9E5 /* BaseStarBucksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseStarBucksViewController.m; sourceTree = "<group>"; };
+		BAFAD54E1FA8683F00B8C9E5 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		BAFAD54F1FA8683F00B8C9E5 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		BAFAD5511FA8688700B8C9E5 /* AccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		BAFAD5521FA8688700B8C9E5 /* AccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		BAFAD5541FA868B100B8C9E5 /* StarGiftCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarGiftCardViewController.h; sourceTree = "<group>"; };
+		BAFAD5551FA868B100B8C9E5 /* StarGiftCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarGiftCardViewController.m; sourceTree = "<group>"; };
+		BAFAD5571FA86D7D00B8C9E5 /* StoresViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoresViewController.h; sourceTree = "<group>"; };
+		BAFAD5581FA86D7D00B8C9E5 /* StoresViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoresViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +110,7 @@
 		BAFAD5321FA8612400B8C9E5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BAFAD53F1FA866AF00B8C9E5 /* Stores */,
 				BAFAD5341FA8612400B8C9E5 /* Home */,
 				BAFAD5351FA8612400B8C9E5 /* StarGiftCard */,
 				BAFAD5331FA8612400B8C9E5 /* Account */,
@@ -105,6 +121,9 @@
 		BAFAD5331FA8612400B8C9E5 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				BAFAD54A1FA867B200B8C9E5 /* AccountModel */,
+				BAFAD5491FA867A700B8C9E5 /* AccountView */,
+				BAFAD5481FA8679A00B8C9E5 /* AccountViewController */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -112,6 +131,9 @@
 		BAFAD5341FA8612400B8C9E5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BAFAD5451FA8675B00B8C9E5 /* HomeView */,
+				BAFAD5441FA8675300B8C9E5 /* HomeModel */,
+				BAFAD5431FA8674100B8C9E5 /* HomeViewCotroller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -119,6 +141,8 @@
 		BAFAD5351FA8612400B8C9E5 /* StarGiftCard */ = {
 			isa = PBXGroup;
 			children = (
+				BAFAD5471FA8677C00B8C9E5 /* StarGiftCardModel */,
+				BAFAD5461FA8676400B8C9E5 /* StarGiftCardView */,
 				BAFAD5361FA8612400B8C9E5 /* StarGiftCardViewController */,
 			);
 			path = StarGiftCard;
@@ -127,6 +151,8 @@
 		BAFAD5361FA8612400B8C9E5 /* StarGiftCardViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BAFAD5541FA868B100B8C9E5 /* StarGiftCardViewController.h */,
+				BAFAD5551FA868B100B8C9E5 /* StarGiftCardViewController.m */,
 			);
 			path = StarGiftCardViewController;
 			sourceTree = "<group>";
@@ -147,6 +173,8 @@
 			children = (
 				BAFAD53C1FA8621800B8C9E5 /* BaseTabBarViewController.h */,
 				BAFAD53D1FA8621800B8C9E5 /* BaseTabBarViewController.m */,
+				BAFAD54B1FA867E800B8C9E5 /* BaseStarBucksViewController.h */,
+				BAFAD54C1FA867E800B8C9E5 /* BaseStarBucksViewController.m */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -170,6 +198,99 @@
 			children = (
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		BAFAD53F1FA866AF00B8C9E5 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				BAFAD5421FA8672300B8C9E5 /* StoresViews */,
+				BAFAD5411FA8671600B8C9E5 /* StoresModel */,
+				BAFAD5401FA866F700B8C9E5 /* StoresViewController */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		BAFAD5401FA866F700B8C9E5 /* StoresViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BAFAD5571FA86D7D00B8C9E5 /* StoresViewController.h */,
+				BAFAD5581FA86D7D00B8C9E5 /* StoresViewController.m */,
+			);
+			path = StoresViewController;
+			sourceTree = "<group>";
+		};
+		BAFAD5411FA8671600B8C9E5 /* StoresModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoresModel;
+			sourceTree = "<group>";
+		};
+		BAFAD5421FA8672300B8C9E5 /* StoresViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StoresViews;
+			sourceTree = "<group>";
+		};
+		BAFAD5431FA8674100B8C9E5 /* HomeViewCotroller */ = {
+			isa = PBXGroup;
+			children = (
+				BAFAD54E1FA8683F00B8C9E5 /* HomeViewController.h */,
+				BAFAD54F1FA8683F00B8C9E5 /* HomeViewController.m */,
+			);
+			path = HomeViewCotroller;
+			sourceTree = "<group>";
+		};
+		BAFAD5441FA8675300B8C9E5 /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeModel;
+			sourceTree = "<group>";
+		};
+		BAFAD5451FA8675B00B8C9E5 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		BAFAD5461FA8676400B8C9E5 /* StarGiftCardView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StarGiftCardView;
+			sourceTree = "<group>";
+		};
+		BAFAD5471FA8677C00B8C9E5 /* StarGiftCardModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StarGiftCardModel;
+			sourceTree = "<group>";
+		};
+		BAFAD5481FA8679A00B8C9E5 /* AccountViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BAFAD5511FA8688700B8C9E5 /* AccountViewController.h */,
+				BAFAD5521FA8688700B8C9E5 /* AccountViewController.m */,
+			);
+			path = AccountViewController;
+			sourceTree = "<group>";
+		};
+		BAFAD5491FA867A700B8C9E5 /* AccountView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AccountView;
+			sourceTree = "<group>";
+		};
+		BAFAD54A1FA867B200B8C9E5 /* AccountModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AccountModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,10 +365,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAFAD54D1FA867E800B8C9E5 /* BaseStarBucksViewController.m in Sources */,
 				BA52A9141F5E50B7001E7608 /* ViewController.m in Sources */,
+				BAFAD5591FA86D7D00B8C9E5 /* StoresViewController.m in Sources */,
+				BAFAD5531FA8688700B8C9E5 /* AccountViewController.m in Sources */,
 				BA52A9111F5E50B7001E7608 /* AppDelegate.m in Sources */,
+				BAFAD5561FA868B100B8C9E5 /* StarGiftCardViewController.m in Sources */,
 				BA52A90E1F5E50B7001E7608 /* main.m in Sources */,
 				BAFAD53E1FA8621800B8C9E5 /* BaseTabBarViewController.m in Sources */,
+				BAFAD5501FA8683F00B8C9E5 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +496,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RUC4M4RM64;
 				INFOPLIST_FILE = testWeChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = testWeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,7 +511,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RUC4M4RM64;
 				INFOPLIST_FILE = testWeChat/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = testWeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
