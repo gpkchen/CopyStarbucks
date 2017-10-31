@@ -95,10 +95,9 @@
 		BAFAD5321FA8612400B8C9E5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				BAFAD5331FA8612400B8C9E5 /* Account */,
 				BAFAD5341FA8612400B8C9E5 /* Home */,
 				BAFAD5351FA8612400B8C9E5 /* StarGiftCard */,
-				BAFAD5361FA8612400B8C9E5 /* Stroe */,
+				BAFAD5331FA8612400B8C9E5 /* Account */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -120,15 +119,16 @@
 		BAFAD5351FA8612400B8C9E5 /* StarGiftCard */ = {
 			isa = PBXGroup;
 			children = (
+				BAFAD5361FA8612400B8C9E5 /* StarGiftCardViewController */,
 			);
 			path = StarGiftCard;
 			sourceTree = "<group>";
 		};
-		BAFAD5361FA8612400B8C9E5 /* Stroe */ = {
+		BAFAD5361FA8612400B8C9E5 /* StarGiftCardViewController */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Stroe;
+			path = StarGiftCardViewController;
 			sourceTree = "<group>";
 		};
 		BAFAD5371FA8619200B8C9E5 /* Tools */ = {
