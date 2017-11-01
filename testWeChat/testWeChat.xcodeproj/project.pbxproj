@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		749963681FA8BDB400269AF3 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 749963671FA8BDB400269AF3 /* HomeCell.m */; };
 		81194B294B8A007E0EBC7093 /* libPods-testWeChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F03BDDCEFCEEC1F8F4383C1 /* libPods-testWeChat.a */; };
+		BA13D4201FA98D3A00898DCD /* StarNetClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D41F1FA98D3A00898DCD /* StarNetClient.m */; };
+		BA13D4261FA992BB00898DCD /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D4251FA992BB00898DCD /* HttpManager.m */; };
 		BA52A90E1F5E50B7001E7608 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A90D1F5E50B7001E7608 /* main.m */; };
 		BA52A9111F5E50B7001E7608 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A9101F5E50B7001E7608 /* AppDelegate.m */; };
 		BA52A9141F5E50B7001E7608 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A9131F5E50B7001E7608 /* ViewController.m */; };
@@ -29,6 +31,14 @@
 		749963671FA8BDB400269AF3 /* HomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
 		78171FA4E497947F98425980 /* Pods-testWeChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testWeChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-testWeChat/Pods-testWeChat.release.xcconfig"; sourceTree = "<group>"; };
 		7CDC9B957A9A2A9E0F83BE95 /* Pods-testWeChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testWeChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testWeChat/Pods-testWeChat.debug.xcconfig"; sourceTree = "<group>"; };
+		BA13D4191FA9898A00898DCD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BA13D41A1FA989B100898DCD /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BA13D41B1FA98A4600898DCD /* APPStoreUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPStoreUrl.h; sourceTree = "<group>"; };
+		BA13D41C1FA98A8C00898DCD /* ConfirgUrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirgUrl.h; sourceTree = "<group>"; };
+		BA13D41E1FA98D3A00898DCD /* StarNetClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarNetClient.h; sourceTree = "<group>"; };
+		BA13D41F1FA98D3A00898DCD /* StarNetClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarNetClient.m; sourceTree = "<group>"; };
+		BA13D4241FA992BB00898DCD /* HttpManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
+		BA13D4251FA992BB00898DCD /* HttpManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
 		BA52A9091F5E50B7001E7608 /* testWeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testWeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA52A90D1F5E50B7001E7608 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA52A90F1F5E50B7001E7608 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +94,9 @@
 		7499635F1FA8B7BD00269AF3 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				BA13D41D1FA98B2700898DCD /* Url */,
+				BA13D4191FA9898A00898DCD /* PrefixHeader.pch */,
+				BA13D41A1FA989B100898DCD /* Constants.h */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -91,6 +104,10 @@
 		749963601FA8B7D100269AF3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BA13D41E1FA98D3A00898DCD /* StarNetClient.h */,
+				BA13D41F1FA98D3A00898DCD /* StarNetClient.m */,
+				BA13D4241FA992BB00898DCD /* HttpManager.h */,
+				BA13D4251FA992BB00898DCD /* HttpManager.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -117,6 +134,15 @@
 				0F03BDDCEFCEEC1F8F4383C1 /* libPods-testWeChat.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA13D41D1FA98B2700898DCD /* Url */ = {
+			isa = PBXGroup;
+			children = (
+				BA13D41B1FA98A4600898DCD /* APPStoreUrl.h */,
+				BA13D41C1FA98A8C00898DCD /* ConfirgUrl.h */,
+			);
+			path = Url;
 			sourceTree = "<group>";
 		};
 		BA52A9001F5E50B7001E7608 = {
@@ -403,6 +429,8 @@
 				BAFAD54D1FA867E800B8C9E5 /* BaseStarBucksViewController.m in Sources */,
 				BA52A9141F5E50B7001E7608 /* ViewController.m in Sources */,
 				749963681FA8BDB400269AF3 /* HomeCell.m in Sources */,
+				BA13D4261FA992BB00898DCD /* HttpManager.m in Sources */,
+				BA13D4201FA98D3A00898DCD /* StarNetClient.m in Sources */,
 				BAFAD5591FA86D7D00B8C9E5 /* StoresViewController.m in Sources */,
 				BAFAD5531FA8688700B8C9E5 /* AccountViewController.m in Sources */,
 				BA52A9111F5E50B7001E7608 /* AppDelegate.m in Sources */,
@@ -532,6 +560,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RUC4M4RM64;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = testWeChat/Tools/Tool/PrefixHeader.pch;
 				INFOPLIST_FILE = testWeChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -548,6 +578,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RUC4M4RM64;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = testWeChat/Tools/Tool/PrefixHeader.pch;
 				INFOPLIST_FILE = testWeChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
