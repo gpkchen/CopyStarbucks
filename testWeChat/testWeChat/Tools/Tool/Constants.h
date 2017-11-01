@@ -20,6 +20,14 @@
 #define AppVersion         [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 #define UMComImageWithImageName(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"UMComSDKResources.bundle/images/%@",imageName]]
 
+
+// UI Constants
+#define kMainHeight    [ [ UIScreen mainScreen ] bounds ].size.height
+#define kMainWidth     [ [ UIScreen mainScreen ] bounds ].size.width
+#define kMainScale     [ [ UIScreen mainScreen ] bounds ].size.width / 320.0f
+#define kMainScaleMiunes   [ [ UIScreen mainScreen ] bounds ].size.width / 375.0f
+
+
 //height
 #define KCellHeight_Common             50*kMainScaleMiunes
 
