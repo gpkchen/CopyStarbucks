@@ -27,7 +27,7 @@
                        Failure:(void(^)(NSError *requestErr))failure
 {
     
-    [HttpManager postAsynRequestWithUrl:url Parms:parms Success:success Failure:failure];
+    [HttpManager requestAsynRequestWithUrl:url Parms:parms Success:success Failure:false isGet:NO];
     
 }
 
@@ -43,7 +43,6 @@
     
     session.responseSerializer = [AFHTTPResponseSerializer serializer];
     
-    
     __weak typeof(self) wSelf = self;
     id successBlock = ^(NSURLSessionDataTask * _Nonnull task,id _Nullable responceObject) {
         
@@ -54,6 +53,9 @@
         NSError *error;
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responceObject options:NSJSONReadingMutableContainers error:&error];
         
+        NSLog(@"Url:%@",url);
+        
+        NSLog(@"%@",dic);
         
         if (success != NULL) {
             success(dic);

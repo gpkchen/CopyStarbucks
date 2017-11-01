@@ -10,7 +10,7 @@
 #define APPStoreUrl_h
 
 
-#define BASE_URL   @"www.baidu.com"
+#define BASE_URL   @"https://www.huijuquanqiu.vip/"
 
 
 

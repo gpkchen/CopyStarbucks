@@ -34,7 +34,9 @@ static NSString *HOMECELLREUSEID = @"HOMECELLREUSEID";
 
 
 - (void)viewWillAppear:(BOOL)animated {
+    
     [super viewWillAppear:animated];
+    
     
 }
 
@@ -58,6 +60,18 @@ static NSString *HOMECELLREUSEID = @"HOMECELLREUSEID";
     
 }
 
+
+#pragma mark -- getData
+
+- (void)HomeGetData {
+    
+    [HttpManager postAsynRequestWithUrl:KURLIndex_banner Parms:nil Success:^(NSDictionary *resultObject) {
+        
+    } Failure:^(NSError *requestErr) {
+        
+    }];
+    
+}
 
 #pragma mark -- TableView Delegate And Datasource
 

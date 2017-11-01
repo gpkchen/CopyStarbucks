@@ -9,6 +9,9 @@
 #ifndef ConfirgUrl_h
 #define ConfirgUrl_h
 
+#define KURLIndex_banner                        @"api/index/indexTop"
+
+#define KURLIndex_Down                          @"api/index/indexDown"
 
 
 

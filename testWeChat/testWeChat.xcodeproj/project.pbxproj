@@ -11,6 +11,8 @@
 		81194B294B8A007E0EBC7093 /* libPods-testWeChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F03BDDCEFCEEC1F8F4383C1 /* libPods-testWeChat.a */; };
 		BA13D4201FA98D3A00898DCD /* StarNetClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D41F1FA98D3A00898DCD /* StarNetClient.m */; };
 		BA13D4261FA992BB00898DCD /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D4251FA992BB00898DCD /* HttpManager.m */; };
+		BA13D42C1FA9A7B500898DCD /* BaseStarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D42B1FA9A7B500898DCD /* BaseStarModel.m */; };
+		BA13D4301FA9A82C00898DCD /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D42F1FA9A82C00898DCD /* HomeModel.m */; };
 		BA52A90E1F5E50B7001E7608 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A90D1F5E50B7001E7608 /* main.m */; };
 		BA52A9111F5E50B7001E7608 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A9101F5E50B7001E7608 /* AppDelegate.m */; };
 		BA52A9141F5E50B7001E7608 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A9131F5E50B7001E7608 /* ViewController.m */; };
@@ -39,6 +41,10 @@
 		BA13D41F1FA98D3A00898DCD /* StarNetClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarNetClient.m; sourceTree = "<group>"; };
 		BA13D4241FA992BB00898DCD /* HttpManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
 		BA13D4251FA992BB00898DCD /* HttpManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
+		BA13D42A1FA9A7B500898DCD /* BaseStarModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseStarModel.h; sourceTree = "<group>"; };
+		BA13D42B1FA9A7B500898DCD /* BaseStarModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseStarModel.m; sourceTree = "<group>"; };
+		BA13D42E1FA9A82C00898DCD /* HomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
+		BA13D42F1FA9A82C00898DCD /* HomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
 		BA52A9091F5E50B7001E7608 /* testWeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testWeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA52A90D1F5E50B7001E7608 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA52A90F1F5E50B7001E7608 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,6 +151,24 @@
 			path = Url;
 			sourceTree = "<group>";
 		};
+		BA13D4281FA9A47900898DCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA13D42A1FA9A7B500898DCD /* BaseStarModel.h */,
+				BA13D42B1FA9A7B500898DCD /* BaseStarModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA13D42D1FA9A81400898DCD /* HomeModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA13D42E1FA9A82C00898DCD /* HomeModel.h */,
+				BA13D42F1FA9A82C00898DCD /* HomeModel.m */,
+			);
+			path = HomeModel;
+			sourceTree = "<group>";
+		};
 		BA52A9001F5E50B7001E7608 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +243,7 @@
 		BAFAD5341FA8612400B8C9E5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BA13D42D1FA9A81400898DCD /* HomeModel */,
 				749963651FA8BD8900269AF3 /* HomeView */,
 				BAFAD5431FA8674100B8C9E5 /* HomeViewCotroller */,
 			);
@@ -260,6 +285,7 @@
 				BAFAD53D1FA8621800B8C9E5 /* BaseTabBarViewController.m */,
 				BAFAD54B1FA867E800B8C9E5 /* BaseStarBucksViewController.h */,
 				BAFAD54C1FA867E800B8C9E5 /* BaseStarBucksViewController.m */,
+				BA13D4281FA9A47900898DCD /* Model */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -329,7 +355,7 @@
 		BA52A9011F5E50B7001E7608 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Telsa_Chen;
 				TargetAttributes = {
 					BA52A9081F5E50B7001E7608 = {
@@ -426,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA13D42C1FA9A7B500898DCD /* BaseStarModel.m in Sources */,
 				BAFAD54D1FA867E800B8C9E5 /* BaseStarBucksViewController.m in Sources */,
 				BA52A9141F5E50B7001E7608 /* ViewController.m in Sources */,
 				749963681FA8BDB400269AF3 /* HomeCell.m in Sources */,
@@ -437,6 +464,7 @@
 				BAFAD5561FA868B100B8C9E5 /* StarGiftCardViewController.m in Sources */,
 				BA52A90E1F5E50B7001E7608 /* main.m in Sources */,
 				BAFAD53E1FA8621800B8C9E5 /* BaseTabBarViewController.m in Sources */,
+				BA13D4301FA9A82C00898DCD /* HomeModel.m in Sources */,
 				BAFAD5501FA8683F00B8C9E5 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,7 +501,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -481,7 +511,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -521,7 +555,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -529,7 +565,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
