@@ -15,18 +15,21 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - JSONModel (1.7.0)
+  - pop (1.0.10)
   - YTKNetwork (2.0.4):
     - AFNetworking (~> 3.0)
 
 DEPENDENCIES:
   - JSONModel (~> 1.7.0)
+  - pop (~> 1.0.10)
   - YTKNetwork (~> 2.0.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: 304784f7002678f5b301bad582a2c84fe2cd9f2a
+PODFILE CHECKSUM: 854a0829117aa03f4769eaa0bd8b5b1ceea4c2a7
 
 COCOAPODS: 1.3.1

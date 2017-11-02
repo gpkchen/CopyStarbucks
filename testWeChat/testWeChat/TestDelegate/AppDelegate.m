@@ -80,6 +80,11 @@
     [self.baseTabBarViewController setViewControllers:@[homeVC,starGiftCardVC,storesVC,accountVC]];
     [self.baseTabBarViewController.tabBar setTintColor:[UIColor greenColor]];
     [self.baseTabBarViewController.tabBar setBackgroundColor:[UIColor whiteColor]];
+        
+    UITabBarItem *homeItem = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@""] selectedImage:[UIImage imageNamed:@""]];
+    
+    [self.baseTabBarViewController setTabBarItem:homeItem];
+    
     
     [self.window setRootViewController:self.baseTabBarViewController];
     
