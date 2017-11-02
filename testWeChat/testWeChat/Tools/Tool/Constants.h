@@ -35,7 +35,7 @@
 #define HMColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 #define HMRandomColor HMColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 //color
-#define KColor_Main                    RGB(73, 67, 70)
+#define KColor_Main                    RGB(22, 163, 83)
 #define KColor_White                   UIColorFromRGB(0Xffffff)
 #define KColor_Gray                    UIColorFromRGB(0Xf7f7f7)   //背景灰
 #define KColor_Gray_99                 UIColorFromRGB(0X999999)   //字色灰

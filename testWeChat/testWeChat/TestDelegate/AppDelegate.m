@@ -68,22 +68,26 @@
 - (void)getRootViewController {
     
     HomeViewController *homeVC = [[HomeViewController alloc] init];
-    homeVC.title = @"首页";
+    UITabBarItem *homeItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"HomeUnSelected"] selectedImage:[UIImage imageNamed:@"HomeSelected"]];
+    homeVC.tabBarItem = homeItem;
+    
     StarGiftCardViewController *starGiftCardVC = [[StarGiftCardViewController alloc] init];
-    starGiftCardVC.title = @"星礼卡";
+    UITabBarItem *starGiftCardItem = [[UITabBarItem alloc] initWithTitle:@"星礼卡" image:[UIImage imageNamed:@"SatrGiftCardUnSelected"] selectedImage:[UIImage imageNamed:@"SatrGiftCardSelected"]];
+    starGiftCardVC.tabBarItem = starGiftCardItem;
+    
     StoresViewController *storesVC = [[StoresViewController alloc] init];
     storesVC.title = @"门店";
-    AccountViewController *accountVC = [[AccountViewController alloc] init];
-    accountVC.title = @"账户";
+    UITabBarItem *storeItem = [[UITabBarItem alloc] initWithTitle:@"门店" image:[UIImage imageNamed:@"StoreUnSelected"] selectedImage:[UIImage imageNamed:@"StoreSelected"]];
+    storesVC.tabBarItem = storeItem;
     
+    AccountViewController *accountVC = [[AccountViewController alloc] init];
+    UITabBarItem *accountItem = [[UITabBarItem alloc] initWithTitle:@"账户" image:[UIImage imageNamed:@"AccountUnSelected"] selectedImage:[UIImage imageNamed:@"AccountSelected"]];
+    accountVC.tabBarItem = accountItem;
+
     self.baseTabBarViewController = [[BaseTabBarViewController alloc] init];
     [self.baseTabBarViewController setViewControllers:@[homeVC,starGiftCardVC,storesVC,accountVC]];
-    [self.baseTabBarViewController.tabBar setTintColor:[UIColor greenColor]];
+    [self.baseTabBarViewController.tabBar setTintColor:KColor_Main];
     [self.baseTabBarViewController.tabBar setBackgroundColor:[UIColor whiteColor]];
-        
-    UITabBarItem *homeItem = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@""] selectedImage:[UIImage imageNamed:@""]];
-    
-    [self.baseTabBarViewController setTabBarItem:homeItem];
     
     
     [self.window setRootViewController:self.baseTabBarViewController];
