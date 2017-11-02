@@ -7,8 +7,9 @@
 //
 
 #import "HomeViewController.h"
-#import "HomeCell.h"
 
+#import "HomeCell.h"
+#import "HomeHeaderView.h"
 
 
 static NSString *HOMECELLREUSEID = @"HOMECELLREUSEID";
@@ -58,16 +59,14 @@ static NSString *HOMECELLREUSEID = @"HOMECELLREUSEID";
     [self.tableView registerClass:[HomeCell class] forCellReuseIdentifier:HOMECELLREUSEID];
     
     
-    self.headerView = [[UITableViewHeaderFooterView alloc] initWithFrame:(CGRectMake(0, 0, kMainWidth, 100*kMainScaleMiunes))];
+    self.headerView = [[HomeHeaderView alloc] initWithFrame:(CGRectMake(0, 0, kMainWidth, 100*kMainScaleMiunes))];
     self.headerView.backgroundColor = KColor_Green;
     
     self.tableView.tableHeaderView = self.headerView;
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:(CGRectZero)];
     [self.view addSubview:self.tableView];
-    
-    
-    
+
 }
 
 

@@ -13,6 +13,7 @@
 		BA13D4261FA992BB00898DCD /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D4251FA992BB00898DCD /* HttpManager.m */; };
 		BA13D42C1FA9A7B500898DCD /* BaseStarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D42B1FA9A7B500898DCD /* BaseStarModel.m */; };
 		BA13D4301FA9A82C00898DCD /* HomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D42F1FA9A82C00898DCD /* HomeModel.m */; };
+		BA13D4331FA9C59D00898DCD /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D4321FA9C59D00898DCD /* HomeHeaderView.m */; };
 		BA52A90E1F5E50B7001E7608 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A90D1F5E50B7001E7608 /* main.m */; };
 		BA52A9111F5E50B7001E7608 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A9101F5E50B7001E7608 /* AppDelegate.m */; };
 		BA52A9141F5E50B7001E7608 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A9131F5E50B7001E7608 /* ViewController.m */; };
@@ -45,6 +46,8 @@
 		BA13D42B1FA9A7B500898DCD /* BaseStarModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseStarModel.m; sourceTree = "<group>"; };
 		BA13D42E1FA9A82C00898DCD /* HomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeModel.h; sourceTree = "<group>"; };
 		BA13D42F1FA9A82C00898DCD /* HomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeModel.m; sourceTree = "<group>"; };
+		BA13D4311FA9C59D00898DCD /* HomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderView.h; sourceTree = "<group>"; };
+		BA13D4321FA9C59D00898DCD /* HomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderView.m; sourceTree = "<group>"; };
 		BA52A9091F5E50B7001E7608 /* testWeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testWeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA52A90D1F5E50B7001E7608 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA52A90F1F5E50B7001E7608 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 			children = (
 				749963661FA8BDB400269AF3 /* HomeCell.h */,
 				749963671FA8BDB400269AF3 /* HomeCell.m */,
+				BA13D4311FA9C59D00898DCD /* HomeHeaderView.h */,
+				BA13D4321FA9C59D00898DCD /* HomeHeaderView.m */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				BA52A9141F5E50B7001E7608 /* ViewController.m in Sources */,
 				749963681FA8BDB400269AF3 /* HomeCell.m in Sources */,
 				BA13D4261FA992BB00898DCD /* HttpManager.m in Sources */,
+				BA13D4331FA9C59D00898DCD /* HomeHeaderView.m in Sources */,
 				BA13D4201FA98D3A00898DCD /* StarNetClient.m in Sources */,
 				BAFAD5591FA86D7D00B8C9E5 /* StoresViewController.m in Sources */,
 				BAFAD5531FA8688700B8C9E5 /* AccountViewController.m in Sources */,
