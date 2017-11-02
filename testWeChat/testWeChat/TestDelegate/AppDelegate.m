@@ -68,20 +68,22 @@
 - (void)getRootViewController {
     
     HomeViewController *homeVC = [[HomeViewController alloc] init];
-    UITabBarItem *homeItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"HomeUnSelected"] selectedImage:[UIImage imageNamed:@"HomeSelected"]];
+    UITabBarItem *homeItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"HomeUnSelected"] selectedImage:[UIImage imageNamed:@"HomeUnSelected"]];
+    [homeItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14*kMainScaleMiunes]} forState:(UIControlStateNormal | UIControlStateSelected)];
+
     homeVC.tabBarItem = homeItem;
     
     StarGiftCardViewController *starGiftCardVC = [[StarGiftCardViewController alloc] init];
-    UITabBarItem *starGiftCardItem = [[UITabBarItem alloc] initWithTitle:@"星礼卡" image:[UIImage imageNamed:@"SatrGiftCardUnSelected"] selectedImage:[UIImage imageNamed:@"SatrGiftCardSelected"]];
+    UITabBarItem *starGiftCardItem = [[UITabBarItem alloc] initWithTitle:@"星礼卡" image:[UIImage imageNamed:@"SatrGiftCardUnSelected"] selectedImage:[UIImage imageNamed:@"SatrGiftCardUnSelected"]];
     starGiftCardVC.tabBarItem = starGiftCardItem;
     
     StoresViewController *storesVC = [[StoresViewController alloc] init];
     storesVC.title = @"门店";
-    UITabBarItem *storeItem = [[UITabBarItem alloc] initWithTitle:@"门店" image:[UIImage imageNamed:@"StoreUnSelected"] selectedImage:[UIImage imageNamed:@"StoreSelected"]];
+    UITabBarItem *storeItem = [[UITabBarItem alloc] initWithTitle:@"门店" image:[UIImage imageNamed:@"StoreUnSelected"] selectedImage:[UIImage imageNamed:@"StoreUnSelected"]];
     storesVC.tabBarItem = storeItem;
     
     AccountViewController *accountVC = [[AccountViewController alloc] init];
-    UITabBarItem *accountItem = [[UITabBarItem alloc] initWithTitle:@"账户" image:[UIImage imageNamed:@"AccountUnSelected"] selectedImage:[UIImage imageNamed:@"AccountSelected"]];
+    UITabBarItem *accountItem = [[UITabBarItem alloc] initWithTitle:@"账户" image:[UIImage imageNamed:@"AccountUnSelected"] selectedImage:[UIImage imageNamed:@"AccountUnSelected"]];
     accountVC.tabBarItem = accountItem;
 
     self.baseTabBarViewController = [[BaseTabBarViewController alloc] init];

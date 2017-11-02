@@ -16,6 +16,7 @@
 		BA13D4331FA9C59D00898DCD /* HomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D4321FA9C59D00898DCD /* HomeHeaderView.m */; };
 		BA13D4371FAAA6EA00898DCD /* ScaleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D4361FAAA6EA00898DCD /* ScaleBarButtonItem.m */; };
 		BA13D43A1FAAA74A00898DCD /* ScaleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D4391FAAA74A00898DCD /* ScaleButton.m */; };
+		BA13D4401FAB078A00898DCD /* ScaleTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BA13D43F1FAB078A00898DCD /* ScaleTabBarItem.m */; };
 		BA52A90E1F5E50B7001E7608 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A90D1F5E50B7001E7608 /* main.m */; };
 		BA52A9111F5E50B7001E7608 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A9101F5E50B7001E7608 /* AppDelegate.m */; };
 		BA52A9141F5E50B7001E7608 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA52A9131F5E50B7001E7608 /* ViewController.m */; };
@@ -54,6 +55,8 @@
 		BA13D4361FAAA6EA00898DCD /* ScaleBarButtonItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScaleBarButtonItem.m; sourceTree = "<group>"; };
 		BA13D4381FAAA74A00898DCD /* ScaleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScaleButton.h; sourceTree = "<group>"; };
 		BA13D4391FAAA74A00898DCD /* ScaleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScaleButton.m; sourceTree = "<group>"; };
+		BA13D43E1FAB078A00898DCD /* ScaleTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScaleTabBarItem.h; sourceTree = "<group>"; };
+		BA13D43F1FAB078A00898DCD /* ScaleTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScaleTabBarItem.m; sourceTree = "<group>"; };
 		BA52A9091F5E50B7001E7608 /* testWeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testWeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA52A90D1F5E50B7001E7608 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BA52A90F1F5E50B7001E7608 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 				BA13D4361FAAA6EA00898DCD /* ScaleBarButtonItem.m */,
 				BA13D4381FAAA74A00898DCD /* ScaleButton.h */,
 				BA13D4391FAAA74A00898DCD /* ScaleButton.m */,
+				BA13D43E1FAB078A00898DCD /* ScaleTabBarItem.h */,
+				BA13D43F1FAB078A00898DCD /* ScaleTabBarItem.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -480,6 +485,7 @@
 				BA52A9141F5E50B7001E7608 /* ViewController.m in Sources */,
 				749963681FA8BDB400269AF3 /* HomeCell.m in Sources */,
 				BA13D4261FA992BB00898DCD /* HttpManager.m in Sources */,
+				BA13D4401FAB078A00898DCD /* ScaleTabBarItem.m in Sources */,
 				BA13D4331FA9C59D00898DCD /* HomeHeaderView.m in Sources */,
 				BA13D4201FA98D3A00898DCD /* StarNetClient.m in Sources */,
 				BA13D4371FAAA6EA00898DCD /* ScaleBarButtonItem.m in Sources */,

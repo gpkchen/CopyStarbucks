@@ -27,6 +27,7 @@
 #define kMainScale     [ [ UIScreen mainScreen ] bounds ].size.width / 320.0f
 #define kMainScaleMiunes   [ [ UIScreen mainScreen ] bounds ].size.width / 375.0f
 
+#define kTabbarHeight       49
 
 //height
 #define KCellHeight_Common             50*kMainScaleMiunes

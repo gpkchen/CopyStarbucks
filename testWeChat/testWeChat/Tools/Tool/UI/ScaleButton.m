@@ -15,6 +15,18 @@
     return [self buttonWithType:(UIButtonTypeCustom)];
 }
 
+//根据内容修改weight，搭配设置type为Coustom
+
+- (CGSize)intrinsicContentSize
+{
+    CGSize s = [super intrinsicContentSize];
+    
+    return CGSizeMake(s.width + self.titleEdgeInsets.left + self.titleEdgeInsets.right,
+                      s.height + self.titleEdgeInsets.top + self.titleEdgeInsets.bottom);
+    
+}
+
+
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -31,14 +43,7 @@
     return self;
 }
 
-- (CGSize)intrinsicContentSize
-{
-    CGSize s = [super intrinsicContentSize];
-    
-    return CGSizeMake(s.width + self.titleEdgeInsets.left + self.titleEdgeInsets.right,
-                      s.height + self.titleEdgeInsets.top + self.titleEdgeInsets.bottom);
-    
-}
+
 
 #pragma mark -- Animation
 
