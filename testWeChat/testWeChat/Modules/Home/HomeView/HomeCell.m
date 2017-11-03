@@ -15,16 +15,21 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self setSelectionStyle:(UITableViewCellSelectionStyleNone)];
-        
-        
-        
+        [self setupHomeCell];
     }
     return self;
 }
 
+//每次刷新都会走的方法
 - (void)layoutSubviews {
     
     [super layoutSubviews];
+    
+    
+}
+
+
+- (void) setupHomeCell {
     
     UIImageView *imageView = [[UIImageView alloc] init];
     imageView.frame = self.bounds;

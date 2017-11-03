@@ -39,6 +39,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setup];
+        [self setupAppearAnimation];
     }
     return self;
 }
@@ -46,6 +47,16 @@
 
 
 #pragma mark -- Animation
+
+- (void)setupAppearAnimation {
+    
+//    POPBasicAnimation *scaleAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPViewScaleXY];
+//    scaleAnimation.fromValue = [NSValue valueWithCGSize:(CGSizeMake(0.3f, 0.3f))];
+//    scaleAnimation.toValue = [NSValue valueWithCGSize:(CGSizeMake(1.0f, 1.0f))];
+//    scaleAnimation.duration = 1.2f;
+//    [self.layer pop_addAnimation:scaleAnimation forKey:@"buttonAppearAnimation"];
+    
+}
 
 - (void)setup {
     

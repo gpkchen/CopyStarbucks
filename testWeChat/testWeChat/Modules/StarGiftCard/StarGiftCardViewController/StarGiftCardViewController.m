@@ -8,7 +8,6 @@
 
 #import "StarGiftCardViewController.h"
 
-
 @interface StarGiftCardViewController ()
 
 @property (nonatomic, strong)ScaleButton *joinToClub;
@@ -43,6 +42,7 @@
     [self.joinToClub setTitle:@"加入星享俱乐部" forState:(UIControlStateNormal)];
     [self.joinToClub addTarget:self action:@selector(joinToClubButtonAction) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:self.joinToClub];
+
     
 }
 

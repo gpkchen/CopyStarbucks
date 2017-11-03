@@ -39,10 +39,6 @@
     [leftButton setTitle:@"登录"];
     [self addSubview:leftButton];
     
-    
-    
-    
-    
 }
 
 
