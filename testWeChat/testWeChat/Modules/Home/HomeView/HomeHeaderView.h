@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeHeaderView : UITableViewHeaderFooterView
+@interface HomeHeaderView : UIView
 
 @end

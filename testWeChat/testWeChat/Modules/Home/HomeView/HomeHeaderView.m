@@ -7,15 +7,44 @@
 //
 
 #import "HomeHeaderView.h"
+#import "HomeHeaderButton.h"
+
+@interface HomeHeaderView ()
+
+{
+    HomeHeaderButton    *leftButton;
+    HomeHeaderButton    *rightButton;
+}
+
+
+@end
+
 
 @implementation HomeHeaderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupHomeHeaderView];
+    }
+    return self;
 }
-*/
+
+#pragma mark -- Private instance Method
+
+- (void)setupHomeHeaderView {
+    
+    leftButton = [HomeHeaderButton buttonWithType:(UIButtonTypeCustom)];
+    [leftButton setLeftImage:[UIImage imageNamed:@"SatrGiftCardSelected"]];
+    [leftButton setTitle:@"登录"];
+    [self addSubview:leftButton];
+    
+    
+    
+    
+    
+}
+
+
 
 @end
