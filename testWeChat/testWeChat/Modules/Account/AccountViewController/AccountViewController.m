@@ -8,6 +8,8 @@
 
 #import "AccountViewController.h"
 
+#import <LocalAuthentication/LocalAuthentication.h>
+
 @interface AccountViewController ()
 
 @end
@@ -19,7 +21,32 @@
     
     self.view.backgroundColor = [UIColor greenColor];
     
+    
+    
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    LAContext *laContext = [[LAContext alloc] init];
+    BOOL canAuth = [laContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:nil];
+    
+    NSLog(@"%d",canAuth);
+    
+    if (canAuth) {
+        [laContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"通过Home键验证已有手机指纹" reply:^(BOOL success, NSError * _Nullable error) {
+            NSLog(@"%d",success);
+            
+        }];
+    }
+    
+}
+
+
+#pragma mark  -- TouchID
+
+
 
 
 

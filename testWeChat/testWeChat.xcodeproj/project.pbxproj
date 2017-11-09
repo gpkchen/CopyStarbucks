@@ -23,6 +23,7 @@
 		BA52A9171F5E50B7001E7608 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA52A9151F5E50B7001E7608 /* Main.storyboard */; };
 		BA52A9191F5E50B7001E7608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA52A9181F5E50B7001E7608 /* Assets.xcassets */; };
 		BA52A91C1F5E50B7001E7608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA52A91A1F5E50B7001E7608 /* LaunchScreen.storyboard */; };
+		BA576F071FB433F800987E24 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA576F061FB433F800987E24 /* LocalAuthentication.framework */; };
 		BA5B39CF1FAC066C0010B099 /* HomeHeaderButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5B39CE1FAC066C0010B099 /* HomeHeaderButton.m */; };
 		BA5B39EF1FAC17A50010B099 /* Heler.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5B39EE1FAC17A50010B099 /* Heler.m */; };
 		BAFAD53E1FA8621800B8C9E5 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAFAD53D1FA8621800B8C9E5 /* BaseTabBarViewController.m */; };
@@ -69,6 +70,7 @@
 		BA52A9181F5E50B7001E7608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA52A91B1F5E50B7001E7608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA52A91D1F5E50B7001E7608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA576F061FB433F800987E24 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		BA5B39CD1FAC066C0010B099 /* HomeHeaderButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeHeaderButton.h; sourceTree = "<group>"; };
 		BA5B39CE1FAC066C0010B099 /* HomeHeaderButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeHeaderButton.m; sourceTree = "<group>"; };
 		BA5B39D21FAC0A120010B099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA576F071FB433F800987E24 /* LocalAuthentication.framework in Frameworks */,
 				81194B294B8A007E0EBC7093 /* libPods-testWeChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +192,7 @@
 		AB7F89F1BD0062DCD02A523F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA576F061FB433F800987E24 /* LocalAuthentication.framework */,
 				0F03BDDCEFCEEC1F8F4383C1 /* libPods-testWeChat.a */,
 			);
 			name = Frameworks;
