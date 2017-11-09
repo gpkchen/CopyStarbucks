@@ -13,12 +13,11 @@
 #import "HomeHeaderButton.h"
 
 static NSString *HOMECELLREUSEID = @"HOMECELLREUSEID";
-
-static CGFloat const  CELLHEIGHT = 200;
-static int  const HEADERHEIGHT   = 100;
-static int  const SECTIONHEADERHEIGHT = 40;
-static int  const ButtonHeight      = 30;
-static int  const ButtonWeight      = 100;
+static CGFloat const  CELLHEIGHT        = 200;
+static int  const WELCOMEHEADERHEIGHT   = 100;
+static int  const SECTIONHEADERHEIGHT   = 40;
+static int  const ButtonHeight          = 30;
+static int  const ButtonWeight          = 100;
 
 @interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate>
 
@@ -29,6 +28,8 @@ static int  const ButtonWeight      = 100;
 @property (nonatomic, strong) UIView        *homeHeaderView;
 @property (nonatomic, strong) UILabel       *welcomeView;
 
+@property (nonatomic, assign) CGFloat       historyY;
+
 @end
 
 @implementation HomeViewController
@@ -37,7 +38,7 @@ static int  const ButtonWeight      = 100;
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (HEADERHEIGHT + SECTIONHEADERHEIGHT)*kMainScaleMiunes, kMainWidth, kMainHeight - kTabbarHeight - (SECTIONHEADERHEIGHT+HEADERHEIGHT)*kMainScaleMiunes) style:(UITableViewStylePlain)];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (WELCOMEHEADERHEIGHT + SECTIONHEADERHEIGHT)*kMainScaleMiunes, kMainWidth, kMainHeight - kTabbarHeight - (SECTIONHEADERHEIGHT+WELCOMEHEADERHEIGHT)*kMainScaleMiunes) style:(UITableViewStylePlain)];
         self.tableView.backgroundColor = [UIColor whiteColor];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
@@ -50,9 +51,8 @@ static int  const ButtonWeight      = 100;
 - (UIView *)homeHeaderView {
     
     if (!_homeHeaderView) {
-        _homeHeaderView = [[UIView alloc] initWithFrame:(CGRectMake(0, HEADERHEIGHT*kMainScaleMiunes, kMainWidth, SECTIONHEADERHEIGHT*kMainScaleMiunes))];
+        _homeHeaderView = [[UIView alloc] initWithFrame:(CGRectMake(0, WELCOMEHEADERHEIGHT*kMainScaleMiunes, kMainWidth, SECTIONHEADERHEIGHT*kMainScaleMiunes))];
         _homeHeaderView.backgroundColor = KColor_White;
-        _homeHeaderView.frame = CGRectMake(0, HEADERHEIGHT, kMainWidth, SECTIONHEADERHEIGHT);
         
     }
     return _homeHeaderView;
@@ -62,7 +62,7 @@ static int  const ButtonWeight      = 100;
     
     if (!_welcomeView) {
         _welcomeView = [[UILabel alloc] init];
-        _welcomeView.frame = CGRectMake(0, 0, kMainWidth, HEADERHEIGHT*kMainScaleMiunes);
+        _welcomeView.frame = CGRectMake(0, 0, kMainWidth, WELCOMEHEADERHEIGHT*kMainScaleMiunes);
         [_welcomeView setBackgroundColor:KColor_Yellow];
         [_welcomeView setFont:[UIFont systemFontOfSize:22*kMainScaleMiunes]];
         [_welcomeView setLineBreakMode:(NSLineBreakByWordWrapping)];
@@ -118,7 +118,7 @@ static int  const ButtonWeight      = 100;
     [self.view addSubview:self.homeHeaderView];
 
     UIButton *leftButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    leftButton.frame = CGRectMake(15, (SECTIONHEADERHEIGHT - ButtonHeight) /2, ButtonWeight*kMainScaleMiunes, ButtonHeight);
+    leftButton.frame = CGRectMake(15, (SECTIONHEADERHEIGHT - ButtonHeight)*kMainScaleMiunes /2, ButtonWeight*kMainScaleMiunes, ButtonHeight*kMainScaleMiunes);
     leftButton.backgroundColor = KColor_Gray;
     [leftButton setTitle:@"登录" forState:(UIControlStateNormal)];
     [leftButton setTitleColor:KColor_Main forState:(UIControlStateNormal)];
@@ -126,7 +126,7 @@ static int  const ButtonWeight      = 100;
     [_homeHeaderView addSubview:leftButton];
 
     UIButton *rightButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    rightButton.frame = CGRectMake(ButtonWeight*kMainScaleMiunes + 30, (SECTIONHEADERHEIGHT - ButtonHeight) /2, ButtonWeight, ButtonHeight);
+    rightButton.frame = CGRectMake(ButtonWeight*kMainScaleMiunes + 30, (SECTIONHEADERHEIGHT - ButtonHeight)*kMainScaleMiunes /2, ButtonWeight*kMainScaleMiunes, ButtonHeight*kMainScaleMiunes);
     rightButton.backgroundColor = KColor_Gray;
     [rightButton setTitle:@"星消息" forState:(UIControlStateNormal)];
     [rightButton setTitleColor:KColor_Main forState:(UIControlStateNormal)];
@@ -158,24 +158,97 @@ static int  const ButtonWeight      = 100;
 
 #pragma mark -- ScrollView delegate
 
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    
+    self.historyY = scrollView.contentOffset.y;
+    
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat y = scrollView.contentOffset.y;
     if (self.tableView == scrollView) {
-        if (HEADERHEIGHT >= y && y > 0) {
-            
-            self.tableView.frame = CGRectMake(0, (HEADERHEIGHT + SECTIONHEADERHEIGHT)*kMainScaleMiunes - y, kMainWidth, kMainHeight - kTabbarHeight - (SECTIONHEADERHEIGHT+ HEADERHEIGHT)*kMainScaleMiunes + y);
-            self.tableView.contentOffset = CGPointMake(0, y);
-            
-            self.welcomeView.frame = CGRectMake(0, -y, kMainWidth, HEADERHEIGHT);
-            self.welcomeView.alpha = 1 - y / 100;
-            
-            self.homeHeaderView.frame = CGRectMake(0, HEADERHEIGHT-y, kMainWidth, SECTIONHEADERHEIGHT);
-            
-        } else {
-            
-        }
+        
+        CGFloat tableViewOrgionY = CGRectGetMinY(self.tableView.frame);
+
+        
+//        if (self.historyY < y) {
+//            NSLog(@"down");
+            if (SECTIONHEADERHEIGHT*kMainScaleMiunes < tableViewOrgionY && (SECTIONHEADERHEIGHT+WELCOMEHEADERHEIGHT)*kMainScaleMiunes >= tableViewOrgionY ){//仅在header出现在上部
+                
+                if (WELCOMEHEADERHEIGHT*kMainScaleMiunes >= y && y >0) {
+                    
+                    self.tableView.frame = CGRectMake(0, (WELCOMEHEADERHEIGHT + SECTIONHEADERHEIGHT)*kMainScaleMiunes - y, kMainWidth, kMainHeight - kTabbarHeight - (SECTIONHEADERHEIGHT + WELCOMEHEADERHEIGHT)*kMainScaleMiunes + y);
+                    self.tableView.contentOffset = CGPointMake(0, y);
+                    
+                    self.welcomeView.frame = CGRectMake(0, -y, kMainWidth, WELCOMEHEADERHEIGHT*kMainScaleMiunes);
+                    
+                    if ( y > 0 ) {
+                        self.welcomeView.alpha = 1 - y / WELCOMEHEADERHEIGHT;
+                    }
+                    
+                    self.homeHeaderView.frame = CGRectMake(0, WELCOMEHEADERHEIGHT*kMainScaleMiunes-y, kMainWidth, SECTIONHEADERHEIGHT*kMainScaleMiunes);
+                    
+                }
+            }
+//        } else {
+//            NSLog(@"up");
+//        }
+        
+        
 
     }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    
+    CGFloat y = scrollView.contentOffset.y;
+    
+//    NSLog(@"EndDragging_y:%.2f",y);
+    
+    if (scrollView == self.tableView) {
+        
+        CGFloat tableViewOrgionY = CGRectGetMinY(self.tableView.frame);
+//        NSLog(@"tableViewOrgionY:%.2f\nSection_H%.2f",tableViewOrgionY,SECTIONHEADERHEIGHT*kMainScaleMiunes);
+        
+        if (tableViewOrgionY >= SECTIONHEADERHEIGHT*kMainScaleMiunes && tableViewOrgionY <= (SECTIONHEADERHEIGHT + WELCOMEHEADERHEIGHT)*kMainScaleMiunes) {//此时header在上部
+            
+            
+            if (kMainScaleMiunes*WELCOMEHEADERHEIGHT/2 >= y && y > 0) {//--UP 不超过一半则复原保留header
+                
+                [UIView animateWithDuration:.2f animations:^{
+                    self.tableView.frame = CGRectMake(0, (WELCOMEHEADERHEIGHT + SECTIONHEADERHEIGHT)*kMainScaleMiunes, kMainWidth, kMainHeight - kTabbarHeight - (SECTIONHEADERHEIGHT + WELCOMEHEADERHEIGHT)*kMainScaleMiunes);
+                    self.tableView.contentOffset = CGPointMake(0, 0);
+                    
+                    self.welcomeView.frame = CGRectMake(0, 0, kMainWidth, WELCOMEHEADERHEIGHT*kMainScaleMiunes);
+                    self.welcomeView.alpha = 1 ;
+                    
+                    self.homeHeaderView.frame = CGRectMake(0, WELCOMEHEADERHEIGHT*kMainScaleMiunes, kMainWidth, SECTIONHEADERHEIGHT*kMainScaleMiunes);
+                }];
+
+                
+            } else if (WELCOMEHEADERHEIGHT*kMainScaleMiunes >= y && y > WELCOMEHEADERHEIGHT*kMainScaleMiunes/2) {//--UP 超过一半则隐藏welcomeHeader
+                
+                [UIView animateWithDuration:.2f animations:^{
+                    self.tableView.frame = CGRectMake(0,  SECTIONHEADERHEIGHT*kMainScaleMiunes, kMainWidth, kMainHeight - kTabbarHeight - (SECTIONHEADERHEIGHT)*kMainScaleMiunes);
+                    self.tableView.contentOffset = CGPointMake(0, WELCOMEHEADERHEIGHT);
+                    
+                    self.welcomeView.frame = CGRectMake(0, -WELCOMEHEADERHEIGHT*kMainScaleMiunes, kMainWidth, WELCOMEHEADERHEIGHT*kMainScaleMiunes);
+                    self.welcomeView.alpha = 0.2f;
+                    
+                    self.homeHeaderView.frame = CGRectMake(0, 0, kMainWidth, SECTIONHEADERHEIGHT*kMainScaleMiunes);
+                }];
+
+            }
+        }
+    }
+
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+    CGFloat tableViewOrgionY = CGRectGetMinY(self.tableView.frame);
+    NSLog(@"tableViewOrgionY:%.2f\nSection_H%.2f",tableViewOrgionY,SECTIONHEADERHEIGHT*kMainScaleMiunes);
+    
 }
 
 
